@@ -78,13 +78,39 @@
             </div>
           </div>
         </div>
-        <iframe
-          class="placeholder-lightbox"
-          src="https://www.youtube.com/embed/oC1ZS8p1TAI?rel=0&autoplay=1&mute=1&loop=1"
-          frameborder="0"
-          allowfullscreen
-        >
-        </iframe>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Echoeback Video</title>
+          <style>
+            .video-player {
+              position: relative;
+              width: 100%;
+              height: 0;
+              padding-bottom: 56.25%; /* 16:9 aspect ratio */
+              background-color: #000;
+            }
+            .video-player iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          </style>
+        </head>
+        <body>
+        
+        <div class="video-player">
+          <iframe
+            src="https://www.youtube.com/embed/oC1ZS8p1TAI?rel=0&autoplay=1&mute=1&loop=1"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        
+        </body>
       </section>
       <section class="layout-239">
         <div class="section-title">
@@ -231,55 +257,28 @@
               <img class="vector-icon4" alt="" src="./public/vector.svg" />
             </div>
             <h3 class="quote1">
-              I highly recommend Echoeback to anyone looking to document their
-              personal journey.
+              Echoeback has provided me with a powerful tool for self-reflection
+              and personal growth.
             </h3>
             <div class="avatar1">
-              <div class="avatar-image-container">
+              <div class="avatar-image-wrapper1">
                 <img
                   class="avatar-image-icon1"
+                  loading="lazy"
                   alt=""
-                  src="./public/avatar-image@2x.png"
+                  src="./public/avatar-image1@2x.png"
                 />
               </div>
-              <div class="avatar-content-container">
+              <div class="avatar-content-wrapper1">
                 <div class="avatar-content1">
-                  <div class="text5">Jane Smith</div>
-                  <div class="text6">Marketing Manager, XYZ Corp</div>
+                  <div class="avatar-names1">Jane Doe</div>
+                  <div class="avatar-titles1">CTO, Acme Inc.</div>
                 </div>
               </div>
-              <div class="divider1"></div>
+              <div class="divider"></div>
               <img class="logos-icon1" alt="" src="./public/logos1.svg" />
             </div>
           </div>
-        </div>
-      </section>
-      <section class="cta-1">
-        <div class="container1">
-          <div class="column9">
-            <div class="content8">
-              <h1 class="heading5">What do you want Echoed Back?</h1>
-              <div class="body">
-                Remind yourself of anything, from the small victories that make
-                your day brighter to the profound insights that shape your path
-                forward.
-              </div>
-            </div>
-            <div class="actions3">
-              <button class="button12" id="button3">
-                <div class="button13">START NOW</div>
-              </button>
-              <div class="button14" id="buttonContainer">
-                <div class="button15">How it works?</div>
-              </div>
-            </div>
-          </div>
-          <img
-            class="placeholder-image-icon3"
-            loading="lazy"
-            alt=""
-            src="./public/placeholder-image3@2x.png"
-          />
         </div>
       </section>
       <footer class="footer-1">
@@ -291,7 +290,7 @@
               alt=""
               src="./public/company-logo.svg"
             />
-
+      
             <div class="join-our-newsletter">
               Stay up to date on the latest features and releases by joining our
               newsletter.
@@ -320,16 +319,16 @@
               <div class="resources">Resources</div>
               <div class="footer-links">
                 <div class="link">
-                  <div class="blog">Blog</div>
+                  <div class="blog" id="blogLink">Blog</div>
                 </div>
                 <div class="link1">
-                  <div class="time-capsule">Time capsule</div>
+                  <div class="time-capsule" id="timeCapsuleLink">Time capsule</div>
                 </div>
                 <div class="link2">
-                  <div class="starting-a-journey">Starting a journey</div>
+                  <div class="starting-a-journey" id="startingJourneyLink">Starting a journey</div>
                 </div>
                 <div class="link3">
-                  <div class="useful-tools">Useful tools</div>
+                  <div class="useful-tools" id="usefulToolsLink">Useful tools</div>
                 </div>
                 <div class="link4"></div>
               </div>
@@ -338,19 +337,19 @@
               <div class="helpful-links">Helpful links</div>
               <div class="footer-links1">
                 <div class="link5">
-                  <div class="home">Home</div>
+                  <div class="home" id="homeLink">Home</div>
                 </div>
                 <div class="link6">
-                  <div class="about-us">About us</div>
+                  <div class="about-us" id="aboutUsLink">About us</div>
                 </div>
                 <div class="link7">
-                  <div class="how-it-works">How it works</div>
+                  <div class="how-it-works" id="howItWorksLink">How it works</div>
                 </div>
                 <div class="link8">
-                  <div class="time-capsule1">Time capsule</div>
+                  <div class="time-capsule1" id="timeCapsule1Link">Time capsule</div>
                 </div>
                 <div class="link9">
-                  <div class="create-a-time">Create a time capsule</div>
+                  <div class="create-a-time" id="createTimeCapsuleLink">Create a time capsule</div>
                 </div>
               </div>
             </div>
@@ -363,8 +362,8 @@
                     loading="lazy"
                     alt=""
                     src="./public/icon--facebook.svg"
+                    id="facebookLink"
                   />
-
                   <div class="facebook">Facebook</div>
                 </div>
                 <div class="link11">
@@ -373,8 +372,8 @@
                     loading="lazy"
                     alt=""
                     src="./public/icon--instagram.svg"
+                    id="instagramLink"
                   />
-
                   <div class="instagram">Instagram</div>
                 </div>
                 <div class="link12">
@@ -383,8 +382,8 @@
                     loading="lazy"
                     alt=""
                     src="./public/icon--x.svg"
+                    id="twitterLink"
                   />
-
                   <div class="x">Twitter</div>
                 </div>
                 <div class="link13">
@@ -393,8 +392,8 @@
                     loading="lazy"
                     alt=""
                     src="./public/icon--linkedin.svg"
+                    id="linkedinLink"
                   />
-
                   <div class="linkedin">LinkedIn</div>
                 </div>
                 <div class="link14">
@@ -403,8 +402,8 @@
                     loading="lazy"
                     alt=""
                     src="./public/icon--youtube.svg"
+                    id="youtubeLink"
                   />
-
                   <div class="youtube">Youtube</div>
                 </div>
               </div>
@@ -418,9 +417,9 @@
               © 2024 Echoeback. All rights reserved.
             </div>
             <div class="footer-links2">
-              <div class="privacy-policy">Privacy Policy</div>
-              <div class="terms-of-service">Terms and Conditions</div>
-              <div class="cookies-settings">Cookie Settings</div>
+              <div class="privacy-policy" id="privacyPolicyLink">Privacy Policy</div>
+              <div class="terms-of-service" id="termsOfServiceLink">Terms and Conditions</div>
+              <div class="cookies-settings" id="cookieSettingsLink">Cookie Settings</div>
             </div>
           </div>
         </div>
@@ -428,82 +427,160 @@
     </div>
 
     <script>
-      var echoebackLogo250X150Px = document.getElementById("echoebackLogo250X150Px");
-      if (echoebackLogo250X150Px) {
-        echoebackLogo250X150Px.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/home";
-        });
-      }
+      document.getElementById('echoebackLogo250X150Px').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com';
+      });
 
-      var linkOneText = document.getElementById("linkOneText");
-      if (linkOneText) {
-        linkOneText.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/about";
-        });
-      }
+      document.getElementById('linkOneText').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/discover';
+      });
 
-      var linkTwoText = document.getElementById("linkTwoText");
-      if (linkTwoText) {
-        linkTwoText.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/how-it-works";
-        });
-      }
+      document.getElementById('linkTwoText').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/how-it-works';
+      });
 
-      var linkThreeText = document.getElementById("linkThreeText");
-      if (linkThreeText) {
-        linkThreeText.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/features";
-        });
-      }
+      document.getElementById('linkThreeText').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/features';
+      });
 
-      var teamText = document.getElementById("teamText");
-      if (teamText) {
-        teamText.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/team";
-        });
-      }
+      document.getElementById('teamText').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/team';
+      });
 
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/blog";
-        });
-      }
+      document.getElementById('buttonContainer').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/blog';
+      });
 
-      var button = document.getElementById("button");
-      if (button) {
-        button.addEventListener("click", function () {
-          window.location.href = "https://www.echoeback.com/create-a-time-capsule";
-        });
-      }
+      document.getElementById('button').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/send-a-echoe';
+      });
 
-      var button1 = document.getElementById("button1");
-      if (button1) {
-        button1.addEventListener("click", function (e) {
-          window.location.href = "./create-your-time-capsule.html";
-        });
-      }
+      document.getElementById('button1').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/get-started';
+      });
 
-      var button2 = document.getElementById("button2");
-      if (button2) {
-        button2.addEventListener("click", function (e) {
-          window.location.href = "./team.html";
-        });
-      }
+      document.getElementById('button2').addEventListener('click', function() {
+        window.location.href = 'https://www.echoeback.com/meet-the-team';
+      });
 
-      var button3 = document.getElementById("button3");
-      if (button3) {
-        button3.addEventListener("click", function (e) {
-          window.location.href = "./create-your-time-capsule.html";
-        });
-      }
+      var blogLink = document.getElementById("blogLink");
+  if (blogLink) {
+    blogLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/blog";
+    });
+  }
 
-      var buttonContainer = document.getElementById("buttonContainer");
-      if (buttonContainer) {
-        buttonContainer.addEventListener("click", function (e) {
-          window.location.href = "./time-capsules.html";
-        });
-      }
+  var timeCapsuleLink = document.getElementById("timeCapsuleLink");
+  if (timeCapsuleLink) {
+    timeCapsuleLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/time-capsule";
+    });
+  }
+
+  var startingJourneyLink = document.getElementById("startingJourneyLink");
+  if (startingJourneyLink) {
+    startingJourneyLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/starting-a-journey";
+    });
+  }
+
+  var usefulToolsLink = document.getElementById("usefulToolsLink");
+  if (usefulToolsLink) {
+    usefulToolsLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/useful-tools";
+    });
+  }
+
+  var homeLink = document.getElementById("homeLink");
+  if (homeLink) {
+    homeLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com";
+    });
+  }
+
+  var aboutUsLink = document.getElementById("aboutUsLink");
+  if (aboutUsLink) {
+    aboutUsLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/about-us";
+    });
+  }
+
+  var howItWorksLink = document.getElementById("howItWorksLink");
+  if (howItWorksLink) {
+    howItWorksLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/how-it-works";
+    });
+  }
+
+  var timeCapsule1Link = document.getElementById("timeCapsule1Link");
+  if (timeCapsule1Link) {
+    timeCapsule1Link.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/time-capsule";
+    });
+  }
+
+  var createTimeCapsuleLink = document.getElementById("createTimeCapsuleLink");
+  if (createTimeCapsuleLink) {
+    createTimeCapsuleLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/create-time-capsule";
+    });
+  }
+
+  var facebookLink = document.getElementById("facebookLink");
+  if (facebookLink) {
+    facebookLink.addEventListener("click", function () {
+      window.location.href = "https://www.facebook.com/echoeback";
+    });
+  }
+
+  var instagramLink = document.getElementById("instagramLink");
+  if (instagramLink) {
+    instagramLink.addEventListener("click", function () {
+      window.location.href = "https://www.instagram.com/echoeback";
+    });
+  }
+
+  var twitterLink = document.getElementById("twitterLink");
+  if (twitterLink) {
+    twitterLink.addEventListener("click", function () {
+      window.location.href = "https://www.twitter.com/echoeback";
+    });
+  }
+
+  var linkedinLink = document.getElementById("linkedinLink");
+  if (linkedinLink) {
+    linkedinLink.addEventListener("click", function () {
+      window.location.href = "https://www.linkedin.com/company/echoeback";
+    });
+  }
+
+  var youtubeLink = document.getElementById("youtubeLink");
+  if (youtubeLink) {
+    youtubeLink.addEventListener("click", function () {
+      window.location.href = "https://www.youtube.com/echoeback";
+    });
+  }
+
+  var privacyPolicyLink = document.getElementById("privacyPolicyLink");
+  if (privacyPolicyLink) {
+    privacyPolicyLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/privacy-policy";
+    });
+  }
+
+  var termsOfServiceLink = document.getElementById("termsOfServiceLink");
+  if (termsOfServiceLink) {
+    termsOfServiceLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/terms-and-conditions";
+    });
+  }
+
+  var cookieSettingsLink = document.getElementById("cookieSettingsLink");
+  if (cookieSettingsLink) {
+    cookieSettingsLink.addEventListener("click", function () {
+      window.location.href = "https://www.echoeback.com/cookie-settings";
+    });
+  }
     </script>
   </body>
 </html>
