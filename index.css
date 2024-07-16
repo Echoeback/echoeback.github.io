@@ -1641,46 +1641,30 @@
 }
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {
-  .echoeback-logo-250-x-150-px1 {
-    width: 120px;
-    height: auto;
+  .navbar-11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .content18 {
-    height: 20px;
-    width: 50px;
+
+  .column8 {
+    width: 100%;
+    text-align: center;
   }
+
   .link-one1,
   .link-two1,
   .link-three1,
-  .team1,
-  .column9,
-  .navbar-11,
-  .header-17,
-  .medium-length-hero,
-  .column10,
-  .content19,
-  .placeholder-lightbox,
-  .subheading1,
-  .section-title2,
-  .text15,
-  .heading11,
-  .button22,
-  .button23,
-  .button24,
-  .button25,
-  .button26,
-  .button27,
-  .button28,
-  .button29,
-  .button23,
-  .button24,
-  .actions6,
-  .actions7,
-  .column8,
-  .column11,
-  .content19,
-  .column10,
-  .nav-link-dropdown1 {
-    /* Add mobile styles for each element */
+  .team1 {
+    margin-bottom: 10px;
+  }
+
+  .actions6 {
+    margin-top: 20px;
+  }
+
+  .actions6 .button22,
+  .actions6 .button24 {
+    margin: 10px;
   }
 }
